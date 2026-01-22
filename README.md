@@ -1,4 +1,4 @@
-# Amhara Bank Excel Upload Portal
+# Excel to Oracle Table Converter
 
 This is a web application that allows users to upload Excel files which are then processed and inserted into an Oracle database.
 
