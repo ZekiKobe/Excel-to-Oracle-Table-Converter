@@ -1,0 +1,5 @@
+django
+djangorestframework
+cx_Oracle
+pandas
+openpyxl

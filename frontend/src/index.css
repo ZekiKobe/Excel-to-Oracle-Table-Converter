@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* Minimal base styles to let Tailwind + React control layout */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #ffffff 0, #e5ecff 35%, #fdf6d3 70%, #ffffff 100%);
+}

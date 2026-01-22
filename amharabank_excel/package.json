@@ -1,0 +1,14 @@
+{
+  "name": "amharabank-excel-backend",
+  "version": "1.0.0",
+  "description": "Backend for Amhara Bank Excel Upload Portal",
+  "main": "manage.py",
+  "scripts": {
+    "start": "python manage.py runserver",
+    "migrate": "python manage.py migrate",
+    "dev": "python manage.py runserver"
+  },
+  "keywords": ["django", "oracle", "excel", "pandas"],
+  "author": "Amhara Bank",
+  "license": "MIT"
+}
