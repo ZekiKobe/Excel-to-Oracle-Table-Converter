@@ -73,15 +73,17 @@ def upload_excel(request):
                 'message': 'Invalid table name provided.'
             }, status=400)
 
-        # Save file temporarily
-        with tempfile.NamedTemporaryFile(delete=False, suffix='.xlsx') as tmp_file:
+        # Save file temporarily (suffix must match format for pandas engine selection)
+        file_ext = '.xlsx' if uploaded_file.name.lower().endswith('.xlsx') else '.xls'
+        excel_engine = 'openpyxl' if file_ext == '.xlsx' else 'xlrd'
+
+        with tempfile.NamedTemporaryFile(delete=False, suffix=file_ext) as tmp_file:
             for chunk in uploaded_file.chunks():
                 tmp_file.write(chunk)
             tmp_file_path = tmp_file.name
 
         try:
-            # Read Excel file with pandas
-            df = pd.read_excel(tmp_file_path)
+            df = pd.read_excel(tmp_file_path, engine=excel_engine)
 
             if df.empty:
                 return JsonResponse({

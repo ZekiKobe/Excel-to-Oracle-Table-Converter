@@ -1,5 +1,7 @@
 django
+django-cors-headers
 djangorestframework
 cx_Oracle
 pandas
 openpyxl
+xlrd>=2.0.1
